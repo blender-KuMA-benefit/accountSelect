@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Googleアカウント選択</title>
+</head>
+<body>
+  <h2>どのGoogleアカウントで開きますか？</h2>
+  <button onclick="selectAccount(0)">アカウント 0</button>
+  <button onclick="selectAccount(1)">アカウント 1</button>
+  <button onclick="selectAccount(2)">アカウント 2</button>
+  <button onclick="selectAccount(3)">アカウント 3</button>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("target");
+
+    function selectAccount(authuser) {
+      if (!target) {
+        alert("リンクが無効です");
+        return;
+      }
+
+      const separator = target.includes("?") ? "&" : "?";
+      const finalUrl = `${target}${separator}authuser=${authuser}`;
+      window.location.href = finalUrl;
+    }
+  </script>
+</body>
+</html>
