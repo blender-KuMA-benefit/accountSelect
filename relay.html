@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
   <title>Googleアカウント選択</title>
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+<!--   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+
 <body>
+
+  <!-- 背景エフェクト -->
+  <div class="background-stars"></div>
+  <div class="magic-circle"></div>
+
+  <!-- メインコンテンツ -->
   <div class="container">
-    <h2>Select an Account</h2>
+    <!-- ロゴ風SVG -->
+    <div class="logo">
+      <svg width="60" height="60" viewBox="0 0 100 100" fill="#00d4ff" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="#00d4ff" stroke-width="5" fill="none"/>
+        <path d="M50 20 L58 70 L42 70 Z" fill="#00d4ff"/>
+      </svg>
+    </div>
+    
+    <h2>Select your Google Account</h2>
     <div class="button-group">
       <button onclick="selectAccount(0)">
         <img src="images/account0.png" alt="account No.01">
