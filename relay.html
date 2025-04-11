@@ -3,15 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Googleアカウント選択</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h2>どのGoogleアカウントで開きますか？</h2>
-  <button onclick="selectAccount(0)">アカウント 0</button>
-  <button onclick="selectAccount(1)">アカウント 1</button>
-  <button onclick="selectAccount(2)">アカウント 2</button>
-  <button onclick="selectAccount(3)">アカウント 3</button>
+  <div class="container">
+    <h2>どのGoogleアカウントで開きますか？</h2>
+    <div class="button-group">
+      <button onclick="selectAccount(0)">
+        <img src="images/account0.png" alt="アカウント0">
+        アカウント 0
+      </button>
+      <button onclick="selectAccount(1)">
+        <img src="images/account1.png" alt="アカウント1">
+        アカウント 1
+      </button>
+      <button onclick="selectAccount(2)">
+        <img src="images/account2.png" alt="アカウント2">
+        アカウント 2
+      </button>
+      <button onclick="selectAccount(3)">
+        <img src="images/account3.png" alt="アカウント3">
+        アカウント 3
+      </button>
+    </div>
+  </div>
 
   <script>
+    // アカウント選択時に URL を加工して遷移
     function selectAccount(authuser) {
       const params = new URLSearchParams(window.location.search);
       const target = params.get("target");
@@ -24,7 +44,7 @@
       try {
         const separator = target.includes("?") ? "&" : "?";
         const finalUrl = `${target}${separator}authuser=${authuser}`;
-        location.replace(finalUrl); // Safari対策
+        location.replace(finalUrl); // Safari対応
       } catch (e) {
         alert("遷移に失敗しました: " + e.message);
       }
