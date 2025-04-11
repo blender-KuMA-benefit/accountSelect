@@ -1,0 +1,53 @@
+/* 全体の背景と文字色を設定 */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212; /* 黒背景 */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* コンテンツの中央寄せボックス */
+.container {
+  text-align: center;
+  background-color: #1f1f1f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3); /* 水色の光 */
+}
+
+/* 見出し */
+.container h2 {
+  margin-bottom: 30px;
+  font-size: 1.6em;
+  color: #00d4ff; /* 明るい水色 */
+}
+
+/* ボタングループ */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ボタンのデザイン */
+.button-group button {
+  background-color: #00d4ff;
+  color: #121212;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ホバー時のアニメーション */
+.button-group button:hover {
+  background-color: #00a3cc;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
