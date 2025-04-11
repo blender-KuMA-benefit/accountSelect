@@ -12,20 +12,18 @@
   <button onclick="selectAccount(3)">アカウント 3</button>
 
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      window.target = params.get("target");
-    });
-
     function selectAccount(authuser) {
-      if (!window.target) {
+      const params = new URLSearchParams(window.location.search);
+      const target = params.get("target");
+
+      if (!target) {
         alert("リンクが無効です");
         return;
       }
 
       try {
-        const separator = window.target.includes("?") ? "&" : "?";
-        const finalUrl = `${window.target}${separator}authuser=${authuser}`;
+        const separator = target.includes("?") ? "&" : "?";
+        const finalUrl = `${target}${separator}authuser=${authuser}`;
         location.replace(finalUrl); // Safari対策
       } catch (e) {
         alert("遷移に失敗しました: " + e.message);
