@@ -18,7 +18,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(#000, #00a3cc), url('./images/stardust.png');
+  background: radial-gradient(#00a3cc, #000), url('./images/stardust.png');
   background-size: cover;
   z-index: -2;
 }
@@ -26,8 +26,8 @@ body {
 /* 魔法陣風 */
 .magic-circle {
   position: fixed;
-  width: 300%;
-  height: 300%;
+  width: 250%;
+  height: 250%;
   background: url('./images/circle.png') center no-repeat;
   background-size: 60%;
   opacity: 0.4;
