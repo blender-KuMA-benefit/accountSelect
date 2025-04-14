@@ -56,7 +56,8 @@ iOSでChromeを使用する際、アカウントの切り替えがめんどく�
 （なお、このパラメータはアカウントログインした順に0, 1, 2...と割り振られる模様）
 
 
-・「https://blender-kuma-benefit.github.io/accountSelect/relay.html」が中継サイトのリンクとなり、その後ろに「?target=【エンコード済みリンク】」をくっつけることで、元のリンク先へ飛べるようにしている
+・「https://blender-kuma-benefit.github.io/accountSelect/relay.html」
+が中継サイトのリンクとなり、その後ろに「?target=【エンコード済みリンク】」をくっつけることで、元のリンク先へ飛べるようにしている
 
 ---
 
